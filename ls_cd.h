@@ -52,7 +52,7 @@ static void remove_space(char* string)
       }
    }
    for( j = j; j < len; j++) { change[j] = '\0'; }
-   strcpy(string, change);
+   strncpy(string, change,len);
    free(change);
 }
 
@@ -217,7 +217,7 @@ static int stat_function(FILE **fp,int address,char stat[])
                print_info(i);
                break;
            }
-           printf("\n");
+           //printf("\n");
      }
      free(ext);
      free(stat_name);
